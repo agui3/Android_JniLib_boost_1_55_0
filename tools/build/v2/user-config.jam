@@ -104,7 +104,7 @@ androidPlatform = darwin-x86 ;
 }  
    
 modules.poke : NO_BZIP2 : 1 ;  
-ANDROID_NDK = D:\agui\ndk\android-ndk-r9 ;  
+ANDROID_NDK = D:/agui/ndk/android-ndk-r9 ;  
 using gcc : android4.6 : $(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-g++ :  
 <archiver>$(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-ar  
 <ranlib>$(ANDROID_NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(androidPlatform)/bin/arm-linux-androideabi-ranlib  
