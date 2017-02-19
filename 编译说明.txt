@@ -1,0 +1,29 @@
+1. 生成 bjam.exe
+开始 - Microsoft Visual Studio 2010 - Visual Studio Tools - Visual Studio命令行提示
+F:
+cd F:\agui3.0\code\Android\Github\JniLib\boost_1_55_0 
+bootstrap.bat
+
+2. 
+libs\thread\build\Jamfile.v2
+android:
+local rule default_threadapi ( )
+{
+    local api = pthread ;
+    #if [ os.name ] = "NT" { api = win32 ; }
+    return $(api) ;
+}
+windows:
+local rule default_threadapi ( )
+{
+    local api = pthread ;
+    if [ os.name ] = "NT" { api = win32 ; }
+    return $(api) ;
+}
+
+3. libs\context\src\unsupported.cpp
+注释代码：
+//#error "platform not supported"
+
+4. build_windows.bat
+
